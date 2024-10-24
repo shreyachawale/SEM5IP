@@ -1,0 +1,63 @@
+import React, { useState } from 'react';
+
+const SimpleCounter = () => {
+    const [count, setCount] = useState(0); // Initialize count to 0
+
+    return (
+        <div>
+            <p>Count: {count}</p>
+            <button onClick={() => setCount(count + 1)}>Increment</button>
+        </div>
+    );
+};
+
+export default SimpleCounter;
+
+
+import React, { useState, useEffect } from 'react';
+
+const SimpleTimer = () => {
+    const [seconds, setSeconds] = useState(0);
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setSeconds(prev => prev + 1); // Increment seconds every second
+        }, 1000);
+
+        // Cleanup function to clear the interval
+        return () => clearInterval(interval);
+    }, []); // Run once when the component mounts
+
+    return <h1>Timer: {seconds} seconds</h1>;
+};
+
+export default SimpleTimer;
+
+
+
+import React, { createContext, useContext } from 'react';
+
+// Create a Theme Context
+const ThemeContext = createContext('light'); // Default value is 'light'
+
+// Component that uses the context
+const ThemedComponent = () => {
+    const theme = useContext(ThemeContext); // Access the context value
+
+    return (
+        <div style={{ background: theme === 'light' ? '#fff' : '#333', color: theme === 'light' ? '#000' : '#fff' }}>
+            <p>The current theme is {theme}</p>
+        </div>
+    );
+};
+
+// App component that provides the context value
+const App = () => {
+    return (
+        <ThemeContext.Provider value="dark">
+            <ThemedComponent />
+        </ThemeContext.Provider>
+    );
+};
+
+export default App;

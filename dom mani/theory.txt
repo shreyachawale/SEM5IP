@@ -1,0 +1,3 @@
+- DOM manipulation refers to the process of using JavaScript to change the structure, content, or style of a webpage dynamically.
+
+-The addEventListener method is used in JavaScript to attach an event handler to an HTML element. It listens for a specific event (like a mouse click, keyboard input, or hover) and runs a function when that event occurs.

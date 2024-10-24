@@ -1,0 +1,4 @@
+- Synchronous (Sync) operations block the execution of subsequent code until the current file operation is completed. This means the program waits for the I/O operation to finish.
+
+- Asynchronous operations do not block execution. Instead, the program continues running, and a callback is executed when the operation is complete.
+

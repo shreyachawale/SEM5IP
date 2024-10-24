@@ -1,0 +1,14 @@
+-iterator function creates an object that allows you to iterate through numbers starting from 1 up to the limit.
+-next:
+If the count is less than the limit, it returns { value: ++count, done: false } (value increases by 1, done is false because the iteration is not finished).
+Once the count reaches or exceeds the limit, it returns { value: undefined, done: true } (no more values to generate, iteration is complete).
+
+GENERATOR
+-The generator function uses the * syntax, which tells JavaScript that it’s a generator.
+-yield: This keyword is used to pause the function execution and return a value. Each time .next() is called, the function continues execution until the next yield.
+
+-An iterator is an object that defines a sequence and potentially a return value upon its completion. It implements the next() method, which returns an object with two properties: value and done.
+
+-The next() function is used to advance the iterator to the next item in the sequence. It returns an object with the value of the current item and a done property indicating whether the iteration is complete
+
+-A generator function simplifies creating iterators by automatically managing the state of the iteration and using the yield keyword to produce values. A custom iterator requires you to manually implement the next() method and state management.

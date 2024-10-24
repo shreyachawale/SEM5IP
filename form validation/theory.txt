@@ -1,0 +1,11 @@
+- onsubmit="return validateForm()"
+It calls the validateForm() JavaScript function when the form is submitted. If the function returns false, the form submission is prevented. If true is returned, the form submits successfully.
+
+- document.getElementById()
+document.getElementById() is used to access HTML elements by their ID.
+
+- A regular expression (regex) is a pattern used to match character combinations in strings.
+
+-The .trim() method removes any whitespace from both ends of a string. This ensures that a user cannot enter spaces alone or extra spaces, which could lead to incorrect validation.
+
+- The charset="UTF-8" tag ensures that the document can handle all character encodings, including special symbols.

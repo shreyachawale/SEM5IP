@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM & CSS Manipulation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="container">
+    <h1 id="main-heading">Welcome to the DOM Manipulation Demo</h1>
+    <p id="description">Click the button below to change the text and style dynamically.</p>
+
+    <button id="changeContentBtn">Change Content & Style</button>
+    <button id="resetBtn">Reset Content & Style</button>
+  </div>
+
+  <!-- JavaScript Code for DOM and CSS Manipulation -->
+  <script>
+    const changeContentBtn = document.getElementById('changeContentBtn');
+    const resetBtn = document.getElementById('resetBtn');
+    const heading = document.getElementById('main-heading');
+    const description = document.getElementById('description');
+
+    // Function to change content and style
+    changeContentBtn.addEventListener('click', () => {
+      // Change HTML content
+      heading.textContent = "You've changed the content!";
+      description.innerHTML = "<strong>Great!</strong> You just manipulated the DOM and applied some CSS.";
+
+      // Change CSS styles dynamically
+      heading.style.color = "#ff6347"; // Tomato color
+      heading.style.fontSize = "3rem";
+      heading.style.textTransform = "uppercase";
+
+      description.style.backgroundColor = "#f0e68c"; // Light khaki background
+      description.style.padding = "10px";
+      description.style.borderRadius = "5px";
+
+      changeContentBtn.style.backgroundColor = "#4CAF50"; // Green button
+      changeContentBtn.style.color = "#fff";
+    });
+
+    // Reset to original content and style
+    resetBtn.addEventListener('click', () => {
+      // Reset content
+      heading.textContent = "Welcome to the DOM Manipulation Demo";
+      description.textContent = "Click the button below to change the text and style dynamically.";
+
+      // Reset CSS styles
+      heading.style.color = "#333";
+      heading.style.fontSize = "2rem";
+      heading.style.textTransform = "none";
+
+      description.style.backgroundColor = "transparent";
+      description.style.padding = "0";
+      description.style.borderRadius = "0";
+
+      changeContentBtn.style.backgroundColor = "#008CBA"; // Default blue button
+      changeContentBtn.style.color = "#fff";
+    });
+  </script>
+
+</body>
+</html>

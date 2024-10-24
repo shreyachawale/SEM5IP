@@ -1,0 +1,9 @@
+- The fetchNum function returns a promise that resolves or rejects after 100 milliseconds. If the number is greater than 10, it resolves with that number; otherwise, it rejects with an error message "failed to fulfil promise".
+
+- A Promise in JavaScript represents the eventual completion (or failure) of an asynchronous operation and its resulting value. It can be in one of three states: pending, fulfilled, or rejected.
+
+- async marks a function as asynchronous and ensures it returns a promise.
+
+- await is used to pause the execution of the async function until the promise is resolved (fulfilled) or rejected. It can only be used inside an async function.
+
+-resolve is used to return a successful result of a promise. reject is used when an operation fails, signaling the promise was not fulfilled successfully.
